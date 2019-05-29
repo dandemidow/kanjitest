@@ -28,6 +28,12 @@ CppApplication {
         "qml.qrc",
     ]
 
+    Group {
+        files: "*.kj"
+        qbs.install: true
+        qbs.installDir: "bin"
+    }
+
     Group {     // Properties for the produced executable
         fileTagsFilter: "application"
         qbs.install: true

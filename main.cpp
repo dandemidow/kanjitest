@@ -14,8 +14,8 @@ int main(int argc, char *argv[])
     const QUrl url(QStringLiteral("qrc:/main.qml"));
     engine.rootContext()->setContextProperty("kanji", &kanji);
     engine.
-    QObject::connect(&kanji, SIGNAL(newItem()), &engine, SLOT(show()));
-    QObject::connect(&kanji, SIGNAL(chooseItem()), &engine, SLOT(hide()));
+//    QObject::connect(&kanji, SIGNAL(newItem()), &engine, SLOT(show()));
+//    QObject::connect(&kanji, SIGNAL(chooseItem()), &engine, SLOT(hide()));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
                      &app, [url](QObject *obj, const QUrl &objUrl) {
         if (!obj && url == objUrl)

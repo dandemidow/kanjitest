@@ -28,7 +28,6 @@ void Dictionary::addKanji(int group, const KanjiDescriptor &kanji)
 {
     if(groups.contains(group))
     {
-        qWarning()<<"add k "<<kanji.mean;
         groups[group].add(kanji);
     }
     else
@@ -49,7 +48,7 @@ KanjiDescriptor Dictionary::getKanji(int globalNum)
         }
     }
     qFatal("length mismatch");
-    return KanjiDescriptor("","","");
+    return KanjiDescriptor("", "", "");
 }
 
 QString Dictionary::fileNameToGroup(const QString &fileName)
