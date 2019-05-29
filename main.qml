@@ -10,8 +10,6 @@ Window {
     Rectangle {
         id: main
         anchors.fill: parent
-//        width: 600
-//        height: 350
         property string background: kanji.state===0?"white":"red";
         opacity: 0.9
         color: background
